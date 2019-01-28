@@ -5,8 +5,8 @@ class User(object):
     """
 
     user_list = []# Empty user list
-    def save _user(self):
-    User.user_list.append(self)
+    def save_user(self):
+      User.user_list.append(self)
 
 
 
