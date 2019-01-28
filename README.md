@@ -11,8 +11,9 @@ This is an application allows the users to store and manage their passwords. Onc
 
 ## Technology used
 
-_*Python3.6
-*Git_
+-Python3.6
+
+-Git
 
 
 

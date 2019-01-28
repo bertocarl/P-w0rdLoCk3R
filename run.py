@@ -1,23 +1,20 @@
 #!/usr/bin/env python3.6
 from user import User
 
-def save_users(user):
-    pass
-
+def save_user(user):
+    user.save_user()
 
 def create_user(user):
-    user.create user()
-def display_users(param):
-    pass
+    user.create_user()
 
+def display_users(user):
+    display_users()
 
 def check_existing_users(search_number):
-    pass
-
+    check_existing_users()
 
 def find_users(search_number):
-    pass
-
+    find_users()
 
 def main():
     print("Hello Welcome to Password Locker Application")

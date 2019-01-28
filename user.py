@@ -1,9 +1,12 @@
-class User:
+class User(object):
+
     """
     Class that generates new instances of users.
     """
 
     user_list = []# Empty user list
+    def save _user(self):
+    User.user_list.append(self)
 
 
 
