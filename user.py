@@ -7,7 +7,10 @@ class User(object):
     user_list = []# Empty user list
     def save_user(self):
       User.user_list.append(self)
-
+    
+    @classmethod
+    def display_users(cls):
+       return cls.user_list
 
 
     def __init__(self,first_name,last_name,number,email):

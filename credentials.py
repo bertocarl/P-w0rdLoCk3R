@@ -5,6 +5,8 @@ class Credentials:
 
     credentials_list = [] # Empty credential list
 
+   
+
     def __init__(self,email,platform,password):
 
       # docstring removed for simplicity

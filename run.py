@@ -9,13 +9,13 @@ def create_user(user):
     user.create_user()
 
 def display_users(user):
-    display_users()
+    user.display_users()
 
-def check_existing_users(search_number):
-    check_existing_users()
+def check_existing_users():
+    user.check_existing_users()
 
-def find_users(search_number):
-    find_users()
+def find_users():
+    user.find_users()
 
 def main():
     print("Hello Welcome to Password Locker Application")
@@ -35,20 +35,20 @@ def main():
             print("-" * 10)
 
             print("First name ....")
-            f_name = input()
+            first_name = input()
 
             print("Last name ...")
-            l_name = input()
+            last_name = input()
 
             print("Phone number ...")
-            p_number = input()
+            phone_number = input()
 
             print("Email address ...")
-            e_address = input()
+            email_address = input()
 
-            save_users(create_user(f_name, l_name, p_number, e_address))  # create and save new user.
+            save_users(create_user(first_name, last_name, phone_number, email_address))  # create and save new user.
             print('\n')
-            print(f"New User {f_name} {l_name} created")
+            print(f"New User {first_name} {last_name} created")
             print('\n')
 
         elif short_code == 'du':
@@ -86,3 +86,5 @@ def main():
             break
         else:
             print("I really didn't get that. Please use the short codes")
+if __name__ == '__main__':
+    main()
