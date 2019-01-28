@@ -21,6 +21,7 @@ class TestUser(unittest.TestCase):
         test_init test case to test if the object is initialized properly
         '''
 
+
         self.assertEqual(self.new_user.email,"aomware@gmail.com")
         self.assertEqual(self.new_user.password,"aomware123")
 
