@@ -1,9 +1,9 @@
 #!/usr/bin/env python3.6
 from user import User
-from credentials import Credentials
+# from credentials import Credentials
 
-def save_user(user):
-    user.save_user()
+def save_users(user):
+    user.save_users()
 
 def create_user(user):
     user.create_user()
@@ -46,7 +46,7 @@ def main():
             print("Email address ...")
             email_address = input()
 
-            save_user(create_user(first_name, last_name, phone_number, email_address))  # create and save new user.
+            save_users(create_user(user))  # create and save new user.
             print('\n')
             print(f"New User {first_name} {last_name} created")
             print('\n')

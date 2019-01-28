@@ -5,7 +5,7 @@ class User:
     """
 
     user_list = []# Empty user list
-    def save_user(self):
+    def save_users(self):
       User.user_list.append(self)
     
     def delete_user(self):
