@@ -13,13 +13,6 @@ def create_credential(email,platform,password):
     new_credential = Credential(email,platform,password)
     return new_credential
 
-def generate_password():
-	'''
-	Function to generate a password automatically
-	'''
-	gen_pass = Credential.generate_password()
-	return gen_pass
-
 def save_users(user):
 
     user.save_user()
@@ -31,10 +24,6 @@ def save_credential(credential):
 def del_user(user):
 
     user.delete_user()
-
-def delete_credential(credential):
-
-    credential.delete_credential()
 
 def find_user(number):
 
@@ -57,7 +46,6 @@ def display_users():
     return User.display_users()
 
 def display_credential():
-
     return Credential.display_credential()
 
 def test_copy_email():
@@ -70,13 +58,7 @@ def test_copy_email():
 
 def main():
     print("Hello Welcome to Password Locker Application")
-     
-    email = input() 
-    password = input()
-    
-    if email == 'aomware@gmail.com' and password == 'admin':
-            print(f"Hello {username}. what would you like to do?")
-            print('\n')
+    print('\n')
     while True:
         print(
             "Use these short codes : cu - create a new user, du - display users, fu -find a user, ex -exit the user list ")
