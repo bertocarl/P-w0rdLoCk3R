@@ -93,9 +93,12 @@ def main():
             p_number = input()
 
             print("Email address ...")
-            email_address = input()
+            email = input()
 
-            save_users(create_user(f_name,l_name,p_number,email_address,password))
+            print("Password ...")
+            password = input()
+
+            save_users(create_user(f_name,l_name,p_number,email,password))
 
             print ('\n')
 
