@@ -1,5 +1,6 @@
 #!/usr/bin/env python3.6
 from user import User
+
 from credentials import Credentials
 
 def create_user(f_name,l_name,p_number,email,password):
@@ -70,15 +71,12 @@ def test_copy_email():
 def main():
     print("Hello Welcome to Password Locker Application")
      
-        email = input("email") 
-        password = input("Password: ")
+    email = input() 
+    password = input()
     
-        if email == 'aomware@gmail.com' and password == 'admin':
+    if email == 'aomware@gmail.com' and password == 'admin':
             print(f"Hello {username}. what would you like to do?")
             print('\n')
-        else:
-            break
-
     while True:
         print(
             "Use these short codes : cu - create a new user, du - display users, fu -find a user, ex -exit the user list ")
