@@ -69,16 +69,15 @@ def test_copy_email():
 
 def main():
     print("Hello Welcome to Password Locker Application")
-    while True: 
-        email = input("Hello! Welcome to Password Locker Application! \n\nemail: ") 
+     
+        email = input("email") 
         password = input("Password: ")
     
         if email == 'aomware@gmail.com' and password == 'admin':
-            #let them in
-            break #they are in, exit loop
-        else:
             print(f"Hello {username}. what would you like to do?")
             print('\n')
+        else:
+            break
 
     while True:
         print(
