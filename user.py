@@ -1,23 +1,19 @@
+# import pyperclip
 class User:
-
     """
     Class that generates new instances of users.
     """
+    pass
 
-    user_list = []# Empty user list
-    def save_users(self):
-      User.user_list.append(self)
-    
+    user_list = [] # Empty user lists
+
+    def save_user(self):
+
+        User.user_list.append(self)
+
     def delete_user(self):
 
         User.user_list.remove(self)
-
-    @classmethod
-    def find_by_number(cls,number):
-
-        for user in cls.user_list:
-            if user.phone_number == number:
-                return user
 
     @classmethod
     def user_exist(cls,number):
@@ -25,8 +21,15 @@ class User:
         for user in cls.user_list:
             if user.phone_number == number:
                     return True
-
+                    
         return False
+
+    @classmethod
+    def find_by_number(cls,number):
+
+        for user in cls.user_list:
+            if user.phone_number == number:
+                return user
 
     @classmethod
     def display_users(cls):
@@ -39,12 +42,12 @@ class User:
         pyperclip.copy(user_found.email)
 
 
-
-    def __init__(self,first_name,last_name,number,email):
+    def __init__(self,f_name,l_name,p_number,email,password):
 
       # docstring removed for simplicity
 
-        self.first_name = first_name
-        self.last_name = last_name
-        self.phone_number = number
+        self.f_name = f_name
+        self.l_name = l_name
+        self.p_number = p_number
         self.email = email
+        self.password = password
