@@ -15,7 +15,7 @@ class TestCredential(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-        self.credential_list = Credentials("Instagram","FTKaragu","123456") # create contact object
+        self.credential_list = Credentials("","","") # create contact object
 
 
     def test_init(self):
@@ -23,8 +23,8 @@ class TestCredential(unittest.TestCase):
         test_init test case to test if the object is initialized properly
         '''
 
+        self.assertEqual(self.credential_list.email,"")
         self.assertEqual(self.credential_list.platform,"")
-        self.assertEqual(self.credential_list.account_name,"")
         self.assertEqual(self.credential_list.password,"")
 
 
