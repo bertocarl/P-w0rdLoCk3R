@@ -1,6 +1,6 @@
 #!/usr/bin/env python3.6
 from user import User
-# from credentials import Credentials
+from credentials import Credentials
 
 def create_user(f_name,l_name,p_number,email,password):
 
@@ -66,24 +66,19 @@ def test_copy_email():
 def test_copy_email():
 
     return Credential.copy_email()
-def loginauth(email, password):
-     """
-     * Confirms that the username exists and that the password is correct for that username
-     * @param(str) email -- the email
-     * @param(str) password -- the password
-     * @return successful login if the email and password is true
-     * @return incorrect email or password (either email does not exist, or password is incorrect)
-     """
-    if username in users:
-        if password == users[username]["password"]:
-            print("Login successful")
-        else
-            print("Incorrect email or password")
+
 def main():
     print("Hello Welcome to Password Locker Application")
-    user_name = input()
-    print(f"Hello {user_name}. what would you like to do?")
-    print('\n')
+    while True: 
+        email = input("Hello! Welcome to Password Locker Application! \n\nemail: ") 
+        password = input("Password: ")
+    
+        if email == 'aomware@gmail.com' and password == 'admin':
+            #let them in
+            break #they are in, exit loop
+        else:
+            print(f"Hello {username}. what would you like to do?")
+            print('\n')
 
     while True:
         print(
