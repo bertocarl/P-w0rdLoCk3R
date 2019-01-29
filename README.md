@@ -7,7 +7,8 @@ This is an application allows the users to store and manage their passwords. Onc
 
 
 ## AUTHOR
-@bertocarl -ALBERT CARLOS OMWARE
+-ALBERT CARLOS OMWARE
+-@bertocarl is my github account.
 
 ## Technology used
 
