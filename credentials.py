@@ -10,11 +10,9 @@ class Credentials:
     credential_list = [] # Empty credential lists
 
     def save_credential(self):
-
         Credential.credential_list.append(self)
 
     def delete_credential(self):
-
         Credential.credential_list.remove(self)
     def generate_password(self,stringLength=8,char= string.ascii_letters+string.digits):
         '''
@@ -22,20 +20,20 @@ class Credentials:
         '''
 
         pass_gen = ''.join(random.choice(char) for i in range(stringLength))
-            return pass_gen
+        return pass_gen
 
     @classmethod
-    def find_by_email(cls,number):
+    def find_by_email(cls,email):
 
         for credential in cls.credential_list:
-            if credential.email == number:
+            if credential.email == email:
                 return credential
 
     @classmethod
-    def credential_exist(cls,number):
+    def credential_exist(cls,user_name):
 
         for credential in cls.credential_list:
-            if credential.email == number:
+            if credential.email == user_name:
                     return True
 
         return False
@@ -46,8 +44,8 @@ class Credentials:
         return cls.credential_list
 
     @classmethod
-    def copy_email(cls,number):
-        credential_found = Credential.find_by_email(number)
+    def copy_email(cls,email):
+        credential_found = Credential.find_by_email(email)
         pyperclip.copy(credential_found.email)
 
 

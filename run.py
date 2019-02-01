@@ -1,7 +1,7 @@
 #!/usr/bin/env python3.6
 
 from user import User
-# from credentials import Credentials
+from credentials import Credentials
 
 def create_user(email, user_name, password):
     '''
@@ -123,8 +123,9 @@ def main():
                             else:
                                 print(f"Your new password generated is {pass_gen}. \n")
                     elif option == "v":
-                            print("")
-                            if display_credentials(): 
+                        while True:
+                            print("Enter an account name to display")
+                            if display_credential(): 
                                 for Credentials in display_credentials():
                                     print(f"Account Name : {credential.user_account}") 
                                     print(f"Password : {credential.account_password}")
