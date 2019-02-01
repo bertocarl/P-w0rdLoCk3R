@@ -16,6 +16,13 @@ class Credentials:
     def delete_credential(self):
 
         Credential.credential_list.remove(self)
+    def generate_password(self,stringLength=8,char= string.ascii_letters+string.digits):
+        '''
+        This is a method to generate random string passwords for the application
+        '''
+
+        pass_gen = ''.join(random.choice(char) for i in range(stringLength))
+            return pass_gen
 
     @classmethod
     def find_by_email(cls,number):

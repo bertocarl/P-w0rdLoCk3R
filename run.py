@@ -1,9 +1,7 @@
 #!/usr/bin/env python3.6
+
 from user import User
-
-from credentials import Credentials
-import keyring
-
+# from credentials import Credentials
 
 def create_user(email, user_name, password):
     '''
@@ -75,8 +73,77 @@ def main():
 
             if user_exists == user_name :
                 print(" ")
-                print (f"Welcome back {user_name} /n Please choose an option to continue")
+                print (f"Welcome back {user_name}")
                 print(" ")
+            while True:
+                    print("Select an option below to continue:")
+                    print("")
+
+                    print(" [v] View your saved accounts \n [+] Add a new account \n [-] Delete credentials \n [*] Find an account \n [0] Logout \n [cp] Copy information")
+                    option = input()
+                    
+                    if option == '0':
+                        print("See you later....")
+                        break
+
+                    elif option == "-":
+                        while True:
+                            print("Type credential name you want to delete......")
+                            search_account = input()
+                            if check_existing_credentials(search_account):
+                                search_credential = find_credentials(search_account)
+                                print(f"Account :{search_credential.user_account}\n Password: {search_credential.account_password}")
+                                print(f"are you sure you want to delete {search_credential.user_account} ? \n [y] \n [n]")
+                                answer = input().lower()
+
+                                if answer == 'y':
+                                    del_credentials(search_credential)
+                                    print("Account has been deleted sucessfully")
+                                    break
+                                elif answer == 'n':
+                                    continue
+                                else:
+                                    break
+
+                    elif option == "+":
+                        while True:
+
+                            print ("Enter Account Name")
+                            user_account = input()
+                            print("Enter your desired password")
+                            print(" [c] To create your own password use  \n [gen] Generate a random one use  ")
+                            keyword = input().lower()
+                            if keyword == "c" :
+                                account_password = input()
+                                print(f" Account : {user_account}")
+                                print(f" Password : {account_password}")
+                                print(" ")
+
+                            
+                            else:
+                                print(f"Your new password generated is {pass_gen}. \n")
+                    elif option == "v":
+                            print("")
+                            if display_credentials(): 
+                                for Credentials in display_credentials():
+                                    print(f"Account Name : {credential.user_account}") 
+                                    print(f"Password : {credential.account_password}")
+                            else:
+                                print("")
+                                print(" You don't have any credentials yet")
+                                print("")
+
+                    elif option == "*":
+                        while True:
+                            print("Enter an account name to find credentials")
+                            search_account = input()
+                            if check_existing_credentials(search_account):
+                                    search_account = find_credentials(search_account)
+                                    print(f"{search_account.user_account} \n {search_account.account_password}")
+                                    print('-'*10)
+                            else:
+                                    print("The credential doesn't exist")
+                                    break
 
         elif status == '2':
             print("Create an account")
@@ -154,23 +221,17 @@ def main():
 
                             
                             else:
-
-                                if keyword = "gen":
-                                    char = 'abcdefghijklmnopqrstuvwxyz0123456789'
-                                    password =random.choice(char) 
-                                    print('password')                             
-                                    break
-
+                                print(f"Your new password generated is {pass_gen}. \n")
                     elif option == "v":
-                        print("")
-                        if display_credentials(): 
-                            for credential in display_credentials():
-                                print(f"Account Name : {credential.user_account}") 
-                                print(f"Password : {credential.account_password}")
-                        else:
                             print("")
-                            print(" You don't have any credentials yet")
-                            print("")
+                            if display_credentials(): 
+                                for Credentials in display_credentials():
+                                    print(f"Account Name : {credential.user_account}") 
+                                    print(f"Password : {credential.account_password}")
+                            else:
+                                print("")
+                                print(" You don't have any credentials yet")
+                                print("")
 
                     elif option == "*":
                         while True:
