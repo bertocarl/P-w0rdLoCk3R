@@ -1,4 +1,4 @@
-import pyperclip
+# import pyperclip
 import string
 import random
 class Credentials:
@@ -47,10 +47,10 @@ class Credentials:
 
 
 
-    def __init__(self,email,platform,password):
+    def __init__(self,account,account_name,password):
 
       # docstring removed for simplicity
 
-        self.email = email
-        self.platform = platform
+        self.account = account
+        self.account_name = account_name
         self.password = password

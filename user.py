@@ -24,13 +24,7 @@ class User:
                     
         return False
 
-    @classmethod
-    def find_by_number(cls,number):
-
-        for user in cls.user_list:
-            if user.phone_number == number:
-                return user
-
+    
     @classmethod
     def display_users(cls):
 
@@ -42,12 +36,10 @@ class User:
         pyperclip.copy(user_found.email)
 
 
-    def __init__(self,f_name,l_name,p_number,email,password):
+    def __init__(self,user_name,email,password):
 
       # docstring removed for simplicity
 
-        self.f_name = f_name
-        self.l_name = l_name
-        self.p_number = p_number
+        self.user_name = user_name
         self.email = email
         self.password = password
